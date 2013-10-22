@@ -1,64 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="img/favicon.png">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Bootstrap 101 Template</title>
-    
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <title>Purple Vintage Road Bike</title>
 
-    <!-- Custom styles  -->
-    <link href="css/site.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="html5shiv/js/html5shiv.js"></script>
-      <script src="respond/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
+        <!-- Custom styles  -->
+        <link href="css/site.css" rel="stylesheet">
 
- <body>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="html5shiv/js/html5shiv.js"></script>
+            <script src="respond/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="home.html">Decidor</a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div><!--/.navbar-->
+
+        <div class="container">
+
+            <h3>Purple Vintage Road Bike</h3>
+
+        <!-- Main Content -->
+        <div class="row">
+
+            <!-- Left Column -->
+            <div class="span8">
+
+                <!-- Carousel -->
+                <div id="bike-carousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#bike-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#bike-carousel" data-slide-to="1"></li>
+                        <li data-target="#bike-carousel" data-slide-to="2"></li>
+                        <li data-target="#bike-carousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="active item" data-slide-number="0">
+                            <img src="img/1-500.jpg" class="img-rounded" style="width: 100%;" />
+                        </div>
+                        <div class="item" data-slide-number="1">
+                            <img src="img/2-500.jpg" class="img-rounded" style="width: 100%;" />
+                        </div>
+                        <div class="item" data-slide-number="2">
+                            <img src="img/3-500.jpg" class="img-rounded" style="width: 100%;" />
+                        </div>
+                        <div class="item" data-slide-number="3">
+                            <img src="img/4-500.jpg" class="img-rounded" style="width: 100%;" />
+                        </div>
+                    </div>
+
+                    <a class="carousel-control left" href="#bike-carousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#bike-carousel" data-slide="next">&rsaquo;</a>
+                </div>
+                <!-- / Carousel -->
+
+                <!-- Thumbnails -->
+                <ul class="thumbnails">
+                    <li class="span2">
+                        <a class="thumbnail" id="carousel-selector-0">
+                            <img src="img/1-500.jpg" />
+                        </a>
+                    </li>
+                    <li class="span2">
+                        <a class="thumbnail" id="carousel-selector-1">
+                            <img src="img/2-500.jpg" />
+                        </a>
+                    </li>
+                    <li class="span2">
+                        <a class="thumbnail" id="carousel-selector-3">
+                            <img src="img/3-500.jpg" />
+                        </a>
+                    </li>
+                    <li class="span2">
+                        <a class="thumbnail" id="carousel-selector-4">
+                            <img src="img/4-500.jpg" />
+                        </a>
+                    </li>
+                </ul>
+                <!-- / Thumbnails -->
+
+                <div class="alert alert-info">
+                      <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+                    This bike has been checked against police databases and verified as not stolen.{% comment %}  <a href="">Find out more</a>. {% endcomment %}
+                </div>
+
+                <!-- Bike Details Table -->
+                <table class="table table-striped table-bordered" style="margin-top: 1em">
+
+                    <tr>
+                        <td style="width:20%">Type:</td>
+                        <td style="width:30%"><strong>{{ bike.type }}</strong></td>
+                        <td style="width:20%">Frame Size:</td>
+                        <td style="width:30%"><strong>{{ bike.frame_size }} cm</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td>Brand:</td>
+                        <td><strong>{{ bike.brand }}</strong></td>
+                        <td>Model:</td>
+                        <td><strong>{{ bike.model }}</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td>Frame Material:</td>
+                        <td><strong>{{ bike.frame_material }}</strong></td>
+                        <td>Brakes:</td>
+                        <td><strong>{{ bike.brakes }}</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td>Model Year:</td>
+                        <td><strong>{{ bike.model_year }}</strong></td>
+                        <td>Mileage:</td>
+                        <td><strong>{{ bike.mileage }}</strong></td>
+                    </tr>
+
+                </table>
+                <!-- / Bike Details Table -->
+
+                <p>
+                    {% if bike.manufacturer_specs %}
+                    <a href="{{ bike.manufacturer_specs }}" class="btn btn-info">View original manufacturer specifications</a>
+                    {% endif %}
+
+                    {% if bike.bikepedia_url %}
+                    <a href="{{ bike.bikepedia_url }}" class="btn btn-info">View this model on BikePedia</a>
+                    {% endif %}
+                </p>
+
+                <br/>
+
+                {% if bike.description %}
+                <p class="well">{{ bike.description }}</p>
+                {% endif %}
+
+            </div>
+            <!-- / Left Column -->
+
+            <!-- Right Column -->
+            <div class="span4">
+
+
+
+                <div style="border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
+
+                    <h1 class="text-info">£{{ bike.price }}</h1>
+
+                    <h3>{{ bike.type }} / {{ bike.frame_size }} cm</h3>
+
+                    <a class="btn btn-large btn-success" type="button" href="#contact-seller" data-toggle="modal">Buy Now</a>
+
+                    <a class="btn btn-large btn-success" type="button" href="#contact-seller" data-toggle="modal">Arrange Viewing</a>
+
+                </div>
+
+                <div style="margin-top:1em; border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
+
+                    <img src="{{ STATIC_URL }}img/users/{{ bike.seller.id }}" class="img-rounded" style="width: 250px" />
+
+                    <h1>{{ bike.seller.name|capfirst }}</h1>
+
+                    <a class="btn btn-large btn-block btn-primary" type="button" href="#contact-seller" data-toggle="modal">Contact Me</a>
+
+                    <table class="table table-bordered" style="margin-top: 20px">
+
+                        <caption>Social Media</caption>
+
+                        {% if bike.seller.has_facebook %}
+                        <tr>
+                            <td style="width: 30%">Facebook</td>
+                            <td><strong>{{ bike.seller.facebook_friends }} friends</strong></td>
+                        </tr>
+                        {% endif %}
+
+                        {% if bike.seller.has_linkedin %}
+                        <tr>
+                            <td>Linkedin</td>
+                            <td><strong>{{ bike.seller.linkedin_connections }} connections</strong></td>
+                        </tr>
+                        {% endif %}
+
+                    </table>
+
+                    <table class="table table-bordered" style="margin-top: 20px">
+
+                        <caption>Forum Memberships</caption>
+
+                        {% if bike.seller.has_road %}
+                        <tr>
+                            <td style="width: 30%">road.cc</td>
+                            <td><strong>Since May 2007, 43 posts</strong></td>
+                        </tr>
+                        {% endif %}
+
+                        {% if bike.seller.has_single_track %}
+                        <tr>
+                            <td>SingleTrack</td>
+                            <td><strong>Since January 2010, 22 posts</strong></td>
+                        </tr>
+                        {% endif %}
+
+                    </table>
+
+                </div>
+
+            </div>
+            <!-- / Right Column -->
+
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+        <!-- / Main Content -->
 
     </div><!-- /.container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="jquery/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-  </body>
+        <script src="jquery/js/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+
+        <script>
+            jQuery(document).ready(function($) {
+
+            // $('#bike-carousel').carousel();
+
+            //Handles the carousel thumbnails
+            $('[id^=carousel-selector-]').click( function(){
+                    var id_selector = $(this).attr("id");
+                    var id = id_selector.substr(id_selector.length -1);
+                    var id = parseInt(id);
+                    $('#bike-carousel').carousel(id);
+            });
+
+            });
+        </script>
+    </body>
 </html>
