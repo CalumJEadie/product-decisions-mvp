@@ -49,91 +49,98 @@
 
             <h3>Purple Vintage Road Bike</h3>
 
+            <br>
+
             <!-- Main Content -->
             <div class="row">
 
                 <!-- Left Column -->
                 <div class="col-md-8">
 
-                    <!-- Carousel -->
-                    <div id="bike-carousel" class="carousel slide">
+                    <!-- Bike Pictures Panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
 
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#bike-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#bike-carousel" data-slide-to="1"></li>
-                            <li data-target="#bike-carousel" data-slide-to="2"></li>
-                            <li data-target="#bike-carousel" data-slide-to="3"></li>
-                        </ol>
-                        <!-- /Indicators -->
+                            <!-- Carousel -->
+                            <div id="bike-carousel" class="carousel slide">
 
-                        <!-- Slide wrapper -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="img/1-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                />
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#bike-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#bike-carousel" data-slide-to="1"></li>
+                                    <li data-target="#bike-carousel" data-slide-to="2"></li>
+                                    <li data-target="#bike-carousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- /Indicators -->
+
+                                <!-- Slide wrapper -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="img/1-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/2-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/3-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/4-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                        />
+                                    </div>
+                                </div>
+                                <!-- /Slide wrapper -->
                             </div>
-                            <div class="item">
-                                <img src="img/2-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                />
-                            </div>
-                            <div class="item">
-                                <img src="img/3-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                />
-                            </div>
-                            <div class="item">
-                                <img src="img/4-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                />
-                            </div>
-                        </div>
-                        <!-- /Slide wrapper -->
-                    </div>
-                    <!-- / Carousel -->
+                            <!-- / Carousel -->
+
+                        </div> <!-- /.panel-body -->
+                    </div><!-- /.panel -->
 
                 </div>
                 <!-- / Left Column -->
-                
+
                 <!-- Right Column -->
                 <div class="col-md-4">
-                    <div style="border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center;">
-                         <h1 class="text-info">£{{ bike.price }}</h1>
-                         <h3>{{ bike.type }} / {{ bike.frame_size }} cm</h3>
-             <a class="btn btn-lg btn-success" type="button" href="#contact-seller"
-                        data-toggle="modal">Buy Now</a>
-             <a class="btn btn-lg btn-success" type="button"
-                        href="#contact-seller" data-toggle="modal">Arrange Viewing</a>
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-body" style="text-align: center;">
+
+                            <a class="btn btn-lg btn-success" type="button" href="http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850">Buy Now</a>
+                            
+                            <h3>£400 from ebay.com</h3>
+
+                        </div>
+             
                     </div>
-                    <div style="margin-top: 1em; border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center;">
-                        <img src="{{ STATIC_URL }}img/users/{{ bike.seller.id }}" class="img-rounded img-responsive"
-                        style="width: 250px;" />
-                         <h1>{{ bike.seller.name|capfirst }}</h1>
-             <a class="btn btn-lg btn-block btn-primary" type="button" href="#contact-seller"
-                        data-toggle="modal">Contact Me</a>
-                        <table class="table table-bordered" style="margin-top: 20px;">
-                            <caption>Social Media</caption>{% if bike.seller.has_facebook %}
-                            <tr>
-                                <td style="width: 30%;">Facebook</td>
-                                <td><strong>{{ bike.seller.facebook_friends }} friends</strong>
-                                </td>
-                            </tr>{% endif %} {% if bike.seller.has_linkedin %}
-                            <tr>
-                                <td>Linkedin</td>
-                                <td><strong>{{ bike.seller.linkedin_connections }} connections</strong>
-                                </td>
-                            </tr>{% endif %}</table>
-                        <table class="table table-bordered" style="margin-top: 20px;">
-                            <caption>Forum Memberships</caption>{% if bike.seller.has_road %}
-                            <tr>
-                                <td style="width: 30%;">road.cc</td>
-                                <td><strong>Since May 2007, 43 posts</strong>
-                                </td>
-                            </tr>{% endif %} {% if bike.seller.has_single_track %}
-                            <tr>
-                                <td>SingleTrack</td>
-                                <td><strong>Since January 2010, 22 posts</strong>
-                                </td>
-                            </tr>{% endif %}</table>
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-body" style="text-align: center;">
+
+                            <h3>Love this bike?</h3>
+
+                            <a class="btn btn-lg btn-default" type="button" href="#">Share</a>
+
+                        </div>
+             
                     </div>
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-body" style="text-align: center;">
+
+                            <h3>Not quite right?</h3>
+
+                            <a class="btn btn-lg btn-default" type="button" href="#">Tell us more</a>
+
+                        </div>
+             
+                    </div>
+
                 </div>
                 <!-- / Right Column -->
 </div>
