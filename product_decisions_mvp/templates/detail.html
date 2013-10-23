@@ -1,274 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="shortcut icon" href="img/favicon.png">
+{% extends "base.html" %}
 
-        <title>Purple Vintage Road Bike</title>
+{% load staticfiles %}
 
-        <!-- Bootstrap core CSS -->
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+{% block head_title %}{{ bike.title }}{% endblock %}
 
-        <!-- Custom styles  -->
-        <link href="css/site.css" rel="stylesheet">
+{% block body_base %}
+<div class="container">
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="html5shiv/js/html5shiv.js"></script>
-            <script src="respond/js/respond.min.js"></script>
-        <![endif]-->
-    </head>
+    <h3>Purple Vintage Road Bike</h3>
 
-    <body>
+    <br>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="home.html">Decidor</a>
+    <!-- Main Content -->
+    <div class="row">
+
+        <!-- Left Column -->
+        <div class="col-md-8">
+
+            <!-- Bike Pictures Panel -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <!-- Carousel -->
+                    <div id="bike-carousel" class="carousel slide">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#bike-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#bike-carousel" data-slide-to="1"></li>
+                            <li data-target="#bike-carousel" data-slide-to="2"></li>
+                            <li data-target="#bike-carousel" data-slide-to="3"></li>
+                        </ol>
+                        <!-- /Indicators -->
+
+                        <!-- Slide wrapper -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img/1-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                />
+                            </div>
+                            <div class="item">
+                                <img src="img/2-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                />
+                            </div>
+                            <div class="item">
+                                <img src="img/3-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                />
+                            </div>
+                            <div class="item">
+                                <img src="img/4-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
+                                />
+                            </div>
+                        </div>
+                        <!-- /Slide wrapper -->
+                    </div>
+                    <!-- / Carousel -->
+
+                </div> <!-- /.panel-body -->
+            </div><!-- /.panel -->
+
+
+
+            <!-- Bike Details Panel -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#fit">Fit</a></li>
+                        <li><a href="#specifications">Specifications</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="fit">
+
+                            <br>
+
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img class="img-circle" src="http://placehold.it/100x100">
+                                </div>
+
+                                <div class="col-md-10">
+
+                                    <h4>Your height: 5ft 11in</h4>
+
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img class="img-circle" src="http://placehold.it/100x100">
+                                </div>
+
+                                <div class="col-md-10">
+
+                                    <h4>Fits {{ bike.height_lower }} in to {{ bike.height_upper }}</h4>
+
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img class="img-circle" src="http://placehold.it/100x100">
+                                </div>
+
+                                <div class="col-md-10">
+
+                                    <h4>Good for...</h4>
+
+                                    <ul class="list-inline">
+
+                                        <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Commuting</span></li>
+                                        <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Going to the shops</span></li>
+                                        <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Low maintance</span></li>
+                                        <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Checked not stolen</span></li>
+                                        <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Looking like a boss</span></li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img class="img-circle" src="http://placehold.it/100x100">
+                                </div>
+
+                                <div class="col-md-10">
+
+                                    <blockquote>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                      <small>Calum, Decidor Co-Founder</small>
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane" id="specifications"></div>
+                    </div>
+
+                </div> <!-- /.panel-body -->
+            </div><!-- /.panel -->
+
+        </div>
+        <!-- / Left Column -->
+
+        <!-- Right Column -->
+        <div class="col-md-4">
+
+            <div class="panel panel-default">
+
+                <div class="panel-body" style="text-align: center;">
+
+                    <a class="btn btn-lg btn-success" type="button" href="http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850">Buy Now</a>
+                    
+                    <h3>£{{ bike.price }} from ebay.com</h3>
+
+                </div>
+     
             </div>
-            <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="about.html">About</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="blog.html">Blog</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </div><!--/.navbar-->
 
-        <div class="container">
+            <div class="panel panel-default">
 
-            <h3>Purple Vintage Road Bike</h3>
+                <div class="panel-body" style="text-align: center;">
 
-            <br>
+                    <h3>Love this bike?</h3>
 
-            <!-- Main Content -->
-            <div class="row">
-
-                <!-- Left Column -->
-                <div class="col-md-8">
-
-                    <!-- Bike Pictures Panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-
-                            <!-- Carousel -->
-                            <div id="bike-carousel" class="carousel slide">
-
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#bike-carousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#bike-carousel" data-slide-to="1"></li>
-                                    <li data-target="#bike-carousel" data-slide-to="2"></li>
-                                    <li data-target="#bike-carousel" data-slide-to="3"></li>
-                                </ol>
-                                <!-- /Indicators -->
-
-                                <!-- Slide wrapper -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="img/1-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/2-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/3-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/4-500.jpg" class="img-rounded img-responsive" style="width: 100%;"
-                                        />
-                                    </div>
-                                </div>
-                                <!-- /Slide wrapper -->
-                            </div>
-                            <!-- / Carousel -->
-
-                        </div> <!-- /.panel-body -->
-                    </div><!-- /.panel -->
-
-
-
-                    <!-- Bike Details Panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-
-                            <ul class="nav nav-tabs" id="myTab">
-                                <li class="active"><a href="#fit">Fit</a></li>
-                                <li><a href="#specifications">Specifications</a></li>
-                            </ul>
-
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="fit">
-
-                                    <br>
-
-                                    <div class="row">
-
-                                        <div class="col-md-2">
-                                            <img class="img-circle" src="http://placehold.it/100x100">
-                                        </div>
-
-                                        <div class="col-md-10">
-
-                                            <h4>Your height: 5ft 11in</h4>
-
-                                        </div>
-
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-
-                                        <div class="col-md-2">
-                                            <img class="img-circle" src="http://placehold.it/100x100">
-                                        </div>
-
-                                        <div class="col-md-10">
-
-                                            <h4>Fits 5 ft 10 in to 6 ft</h4>
-
-                                        </div>
-
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-
-                                        <div class="col-md-2">
-                                            <img class="img-circle" src="http://placehold.it/100x100">
-                                        </div>
-
-                                        <div class="col-md-10">
-
-                                            <h4>Good for...</h4>
-
-                                            <ul class="list-inline">
-
-                                                <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Commuting</span></li>
-                                                <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Going to the shops</span></li>
-                                                <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Low maintance</span></li>
-                                                <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Checked not stolen</span></li>
-                                                <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Looking like a boss</span></li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-
-                                        <div class="col-md-2">
-                                            <img class="img-circle" src="http://placehold.it/100x100">
-                                        </div>
-
-                                        <div class="col-md-10">
-
-                                            <blockquote>
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                              <small>Calum, Decidor Co-Founder</small>
-                                            </blockquote>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="tab-pane" id="specifications"></div>
-                            </div>
-
-                        </div> <!-- /.panel-body -->
-                    </div><!-- /.panel -->
+                    <a class="btn btn-lg btn-default" type="button" href="#">Share</a>
 
                 </div>
-                <!-- / Left Column -->
+     
+            </div>
 
-                <!-- Right Column -->
-                <div class="col-md-4">
+            <div class="panel panel-default">
 
-                    <div class="panel panel-default">
+                <div class="panel-body" style="text-align: center;">
 
-                        <div class="panel-body" style="text-align: center;">
+                    <h3>Not quite right?</h3>
 
-                            <a class="btn btn-lg btn-success" type="button" href="http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850">Buy Now</a>
-                            
-                            <h3>£400 from ebay.com</h3>
-
-                        </div>
-             
-                    </div>
-
-                    <div class="panel panel-default">
-
-                        <div class="panel-body" style="text-align: center;">
-
-                            <h3>Love this bike?</h3>
-
-                            <a class="btn btn-lg btn-default" type="button" href="#">Share</a>
-
-                        </div>
-             
-                    </div>
-
-                    <div class="panel panel-default">
-
-                        <div class="panel-body" style="text-align: center;">
-
-                            <h3>Not quite right?</h3>
-
-                            <a class="btn btn-lg btn-default" type="button" href="#">Tell us more</a>
-
-                        </div>
-             
-                    </div>
+                    <a class="btn btn-lg btn-default" type="button" href="#">Tell us more</a>
 
                 </div>
-                <!-- / Right Column -->
-</div>
-<!-- / Main Content -->
+     
+            </div>
 
-    </div><!-- /.container -->
+        </div>
+        <!-- / Right Column -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-        <script src="jquery/js/jquery.js"></script>
-        <script src="bootstrap/js/bootstrap.js"></script>
+    </div>
+    <!-- / Main Content -->
 
-        <script>
-            jQuery(document).ready(function($) {
+</div><!-- /.container -->
+{% endblock %}
 
-            $('#bike-carousel').carousel({
-                // Do not automatically cycle.
-                interval: false;
-            });
+{% block extra_script %}
+<script>
+    jQuery(document).ready(function($) {
 
-            //Handles the carousel thumbnails
-            $('[id^=carousel-selector-]').click( function(){
-                    var id_selector = $(this).attr("id");
-                    var id = id_selector.substr(id_selector.length -1);
-                    var id = parseInt(id);
-                    $('#bike-carousel').carousel(id);
-            });
+    $('#bike-carousel').carousel({
+        // Do not automatically cycle.
+        interval: false;
+    });
 
-            });
-        </script>
-    </body>
-</html>
+    //Handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+            var id_selector = $(this).attr("id");
+            var id = id_selector.substr(id_selector.length -1);
+            var id = parseInt(id);
+            $('#bike-carousel').carousel(id);
+    });
+
+    });
+</script>
+{% endblock %}
