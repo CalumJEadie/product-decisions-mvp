@@ -1,0 +1,1 @@
+web: gunicorn product_decisions_mvp.wsgi
