@@ -31,11 +31,11 @@
 @swatch-1-dark-orange: #e04010;
 @swatch-1-light-orange: #f27645;
 
-@brand-primary:         @bootstrap-dark-blue;
-@brand-success:         @bootstrap-green;
+@brand-primary:         @swatch-1-dark-green;
+@brand-success:         @swatch-1-dark-orange;
 @brand-warning:         @bootstrap-orange;
 @brand-danger:          @bootstrap-red;
-@brand-info:            @bootstrap-light-blue;
+@brand-info:            @swatch-1-light-green;
 
 // Scaffolding
 // -------------------------
@@ -283,12 +283,12 @@
 // Inverted navbar
 //
 // Reset inverted navbar basics
-@navbar-inverse-color:                      @gray-light;
-@navbar-inverse-bg:                         #222;
+@navbar-inverse-color:                      @gray-lighter;
+@navbar-inverse-bg:                         @swatch-1-dark-green;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 @gray-light;
+@navbar-inverse-link-color:                 @gray-lighter;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
