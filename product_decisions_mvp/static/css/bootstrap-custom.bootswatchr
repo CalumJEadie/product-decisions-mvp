@@ -18,11 +18,24 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
-@brand-success:         #5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
+@bootstrap-dark-blue:         #428bca;
+@bootstrap-green:         #5cb85c;
+@bootstrap-orange:         #f0ad4e;
+@bootstrap-red:          #d9534f;
+@bootstrap-light-blue:            #5bc0de;
+
+@swatch-1-blue: #75f5dc;
+@swatch-1-light-green: #70f59c;
+@swatch-1-medium-green: #1aef45;
+@swatch-1-dark-green: #1e6907;
+@swatch-1-dark-orange: #e04010;
+@swatch-1-light-orange: #f27645;
+
+@brand-primary:         @bootstrap-dark-blue;
+@brand-success:         @bootstrap-green;
+@brand-warning:         @bootstrap-orange;
+@brand-danger:          @bootstrap-red;
+@brand-info:            @bootstrap-light-blue;
 
 // Scaffolding
 // -------------------------
