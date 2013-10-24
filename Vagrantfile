@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "vagrant/bootstrap.sh"
 
     # Reduce the load on the host by capping cpu execution to 10%.
-    config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--cpuexecutioncap", "10"]
-    end
+    #config.vm.provider "virtualbox" do |vb|
+    #    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "10"]
+    #end
 end
