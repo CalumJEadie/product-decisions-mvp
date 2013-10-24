@@ -20,6 +20,8 @@ urlpatterns = patterns('',
 
     url(r'^$', TemplateView.as_view(template_name="home.html")),
 
+    url(r'^about/$', TemplateView.as_view(template_name="about.html")),
+
     # e.g. /bikes/1/
     url(r'^bikes/(?P<bike_id>\d+)/$', views.detail, name='detail'),
 )
