@@ -51,12 +51,29 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
         riderHeightLowerBound = bike.riderHeightLowerFeet*12 + bike.riderHeightLowerInches
         riderHeightUpperBound = bike.riderHeightUpperFeet*12 + bike.riderHeightUpperInches
 
-        console.log(riderHeight)
+        // Show a bike if either
+        // (1) The rider wants a bike for men and the bikes fits men
+        // (2) The rider wants a bike for women and the bikes fits women
+        genderFit = ( $scope.riderMale && bike.male ) ||
+            ( $scope.riderFemale && bike.female )
 
         return riderHeight >= riderHeightLowerBound &&
             riderHeight <= riderHeightUpperBound &&
-            bike.male &&
-            bike.female
+            genderFit
+    }
+
+    /* Start off accepting male and female bikes */
+    $scope.riderMale = true;
+    $scope.riderFemale = true;
+
+    $scope.setRiderMale = function() {
+        $scope.riderMale = true;
+        $scope.riderFemale = false;        
+    }
+
+    $scope.setRiderFemale = function() {
+        $scope.riderMale = false;
+        $scope.riderFemale = true;        
     }
 
 }])

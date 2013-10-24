@@ -44,11 +44,11 @@
         </div>
 
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary">
-            <input ng-model="riderGender" type="radio" name="rider-gender" value="m">Guy
+          <label class="btn btn-primary" ng-click="setRiderMale()">
+            <input type="radio">Guy
           </label>
-          <label class="btn btn-primary">
-            <input ng-model="riderGender" type="radio" name="rider-gender"value="f">Girl
+          <label class="btn btn-primary" ng-click="setRiderFemale()">
+            <input type="radio">Girl
           </label>
         </div>
 
@@ -63,11 +63,12 @@
   <!-- /.jumbotron -->
 
   <div class="well">
-    <h3>Filter</h3>
+    <h3>Debugging</h3>
     {% verbatim %}
     <p>riderHeightFeet: {{ riderHeightFeet }}</p>
     <p>riderHeightInches: {{ riderHeightInches }}</p>
-    <p>riderGender: {{ riderGender }}</p>
+    <p>riderMale: {{ riderMale }}</p>
+    <p>riderFemale: {{ riderFemale }}</p>
     {% endverbatim %}
   </div>
 
