@@ -10,30 +10,53 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
         {
             title: "Purple Vintage Road Bike", 
             price: 400,
-            rider_height_lower_feet: 5,
-            rider_height_lower_inches: 10,
-            rider_height_upper_feet: 6,
-            rider_height_upper_inches: 0,
-            buy_url: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850"
+            riderHeightLowerFeet: 5,
+            riderHeightLowerInches: 10,
+            riderHeightUpperFeet: 6,
+            riderHeightUpperInches: 0,
+            buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
+            male: true,
+            female: true
         },
         {
             title: "Purple Vintage Road Bike", 
-            price: 400,
-            rider_height_lower_feet: 5,
-            rider_height_lower_inches: 10,
-            rider_height_upper_feet: 6,
-            rider_height_upper_inches: 0,
-            buy_url: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850"
+            price: 300,
+            riderHeightLowerFeet: 5,
+            riderHeightLowerInches: 10,
+            riderHeightUpperFeet: 6,
+            riderHeightUpperInches: 0,
+            buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
+            male: true,
+            female: true
         },
         {
             title: "Purple Vintage Road Bike", 
-            price: 400,
-            rider_height_lower_feet: 5,
-            rider_height_lower_inches: 10,
-            rider_height_upper_feet: 6,
-            rider_height_upper_inches: 0,
-            buy_url: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850"
+            price: 200,
+            riderHeightLowerFeet: 5,
+            riderHeightLowerInches: 10,
+            riderHeightUpperFeet: 6,
+            riderHeightUpperInches: 0,
+            buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
+            male: true,
+            female: true
         }
     ];
+
+    $scope.matchesRider = function( bike ) {
+        /*
+         * Returns True if bike matches rider criteria.
+        */
+
+        riderHeight = parseInt($scope.riderHeightFeet)*12 + parseInt($scope.riderHeightInches)
+        riderHeightLowerBound = bike.riderHeightLowerFeet*12 + bike.riderHeightLowerInches
+        riderHeightUpperBound = bike.riderHeightUpperFeet*12 + bike.riderHeightUpperInches
+
+        console.log(riderHeight)
+
+        return riderHeight >= riderHeightLowerBound &&
+            riderHeight <= riderHeightUpperBound &&
+            bike.male &&
+            bike.female
+    }
 
 }])
