@@ -16,6 +16,8 @@ https://github.com/ejholmes/vagrant-heroku
 
 https://devcenter.heroku.com/articles/pgbackups
 
+https://github.com/scottmuc/vagrant-postgresql
+
 Local Development
 -----------------
 
@@ -55,7 +57,8 @@ vagrant ssh
 # On guest machine.
 cd /vagrant
 source venv/bin/activate
-export DATABASE_URL='sqlite:////tmp/db.sqlite'
+# export DATABASE_URL='sqlite:////tmp/db.sqlite'
+export DATABASE_URL = 'postgres://<username>:<password>@<host>/<dbname>'
 python manage.py syncdb
 python manage.py runserver 0.0.0.0:8000
 ```
