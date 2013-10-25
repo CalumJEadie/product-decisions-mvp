@@ -12,6 +12,8 @@ https://github.com/angular/angular-seed
 
 https://devcenter.heroku.com/articles/heroku-postgresql
 
+https://github.com/ejholmes/vagrant-heroku
+
 Local Development
 -----------------
 
