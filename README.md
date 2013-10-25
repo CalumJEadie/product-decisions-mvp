@@ -14,6 +14,8 @@ https://devcenter.heroku.com/articles/heroku-postgresql
 
 https://github.com/ejholmes/vagrant-heroku
 
+https://devcenter.heroku.com/articles/pgbackups
+
 Local Development
 -----------------
 
@@ -59,3 +61,14 @@ python manage.py runserver 0.0.0.0:8000
 ```
 
 View at http://127.0.0.1:8000.
+
+
+Heroku Configuration
+--------------------
+
+Name: product-decisions-mvp
+Region: Europe
+Stack: Cedar
+Add ons:
+- Heroku Postgres Dev :: blue
+- PG Backups, for backing up the Postgres DB
