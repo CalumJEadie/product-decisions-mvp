@@ -78,10 +78,10 @@
     <div ng-repeat="bike in bikes | filter:matchesRider" class="col-sm-6 col-md-4">
       <div class="thumbnail">
         
-        <img src="{% static "img/1-500.jpg" %}" style="min-height: 100px;">
+        {% verbatim %}
+        <img src="{{ bike.primary_img_url }}" style="min-height: 100px;">
 
         <div class="caption">
-        {% verbatim %}
         <h4>{{ bike.title }}</h4>
         {% endverbatim %}
 

@@ -16,7 +16,8 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
             riderHeightUpperInches: 0,
             buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
             male: true,
-            female: true
+            female: true,
+            primary_img_url: "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG"
         },
         {
             title: "Purple Vintage Road Bike", 
@@ -27,7 +28,8 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
             riderHeightUpperInches: 0,
             buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
             male: true,
-            female: true
+            female: true,
+            primary_img_url: "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG"
         },
         {
             title: "Purple Vintage Road Bike", 
@@ -38,7 +40,8 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
             riderHeightUpperInches: 0,
             buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
             male: true,
-            female: true
+            female: true,
+            primary_img_url: "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG"
         }
     ];
 
