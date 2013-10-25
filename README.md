@@ -47,6 +47,7 @@ vagrant ssh
 cd /vagrant
 source venv/bin/activate
 export DATABASE_URL='sqlite:////tmp/db.sqlite'
+python manage.py syncdb
 python manage.py runserver 0.0.0.0:8000
 ```
 
