@@ -2,6 +2,8 @@ from django.db import models
 
 class Bike(models.Model):
 
+    notes = models.TextField(blank=True)
+
     title = models.CharField(max_length=200)
 
     price = models.PositiveSmallIntegerField()
