@@ -21,51 +21,21 @@ https://github.com/scottmuc/vagrant-postgresql
 Local Development
 -----------------
 
-### Setup
-
-Clone the repository.
+Starting your local machine.
 
 ```sh
 git clone git@github.com:CalumJEadie/product-decisions-mvp.git
 cd product-decisions-mvp
-```
-
-Boot up a local Virtual Machine using Vagrant.
-
-```sh
-vagrant up
-```
-
-SSH into machine and install.
-
-```sh
-# On host machine.
-vagrant ssh
-# On guest machine.
-cd /vagrant
-virtualenv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-### Usage
-
-```sh
-# On host machine.
-vagrant up
-vagrant ssh
-# On guest machine.
-cd /vagrant
-source venv/bin/activate
-export DATABASE_URL='sqlite:////tmp/db.sqlite'
-# Revert to SQLite for the moment.
-# export DATABASE_URL='postgres://postgres:password@127.0.0.1:5432/product_decisions_mvp'
-python manage.py syncdb
-python manage.py runserver 0.0.0.0:8000
+./start.sh
 ```
 
 View at http://127.0.0.1:8000.
 
+Stopping your local machine.
+
+```sh
+./stop.sh
+```
 
 Heroku Configuration
 --------------------
