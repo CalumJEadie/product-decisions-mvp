@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load url from future %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,13 +41,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">21&nbsp;&nbsp;Spokes</a>
+        <a class="navbar-brand" href="{% url 'home' %}">21&nbsp;&nbsp;Spokes</a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-        <li><a href="about/">About</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="TODO">Feedback</a></li>
+        <li><a href="http://blog.21spokes.com">Blog</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -65,10 +66,10 @@
           &copy; 2013, 21 Spokes
           &nbsp;
           &nbsp;
-          <a href="about/">About</a>
+          <a href="{% url 'about' %}">About</a>
           &nbsp;
           &nbsp;
-          <a href="feedback.html">Contact us</a>
+          <a href="TODO">Contact us</a>
         </p>
       </footer>
     </div>
