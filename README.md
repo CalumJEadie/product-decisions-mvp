@@ -14,6 +14,10 @@ https://devcenter.heroku.com/articles/heroku-postgresql
 
 https://github.com/ejholmes/vagrant-heroku
 
+https://devcenter.heroku.com/articles/pgbackups
+
+https://github.com/scottmuc/vagrant-postgresql
+
 Local Development
 -----------------
 
@@ -54,8 +58,21 @@ vagrant ssh
 cd /vagrant
 source venv/bin/activate
 export DATABASE_URL='sqlite:////tmp/db.sqlite'
+# Revert to SQLite for the moment.
+# export DATABASE_URL='postgres://postgres:password@127.0.0.1:5432/product_decisions_mvp'
 python manage.py syncdb
 python manage.py runserver 0.0.0.0:8000
 ```
 
 View at http://127.0.0.1:8000.
+
+
+Heroku Configuration
+--------------------
+
+Name: product-decisions-mvp
+Region: Europe
+Stack: Cedar
+Add ons:
+- Heroku Postgres Dev :: blue
+- PG Backups, for backing up the Postgres DB
