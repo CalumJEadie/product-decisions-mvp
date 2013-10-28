@@ -57,9 +57,9 @@ vagrant ssh
 # On guest machine.
 cd /vagrant
 source venv/bin/activate
-# export DATABASE_URL='sqlite:////tmp/db.sqlite'
-export DATABASE_URL='postgres://<username>:<password>@<host>/<dbname>'
-export DATABASE_URL='postgres://postgres:password@127.0.0.1:5432/product_decisions_mvp'
+export DATABASE_URL='sqlite:////tmp/db.sqlite'
+# Revert to SQLite for the moment.
+# export DATABASE_URL='postgres://postgres:password@127.0.0.1:5432/product_decisions_mvp'
 python manage.py syncdb
 python manage.py runserver 0.0.0.0:8000
 ```
