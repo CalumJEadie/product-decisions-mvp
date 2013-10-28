@@ -39,7 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                     "host all all ::1/0 md5",
                 ],
                 :users => [
-                    { :username => "postgres", :password => "password",
+                    { :username => "vagrant", :password => "password",
                     :superuser => true, :login => true, :createdb => true }
                 ],
             }
