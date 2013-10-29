@@ -2,7 +2,9 @@
 To test Skimlinks, copy this code onto page and test link. 
 	<a href="http://test.skimlinks.com">Skimlinks Test</a>
 
-
+##GoSquared
+Tracker documentation: 
+	<https://www.gosquared.com/developer/tracker/>
 
 
 Resources
