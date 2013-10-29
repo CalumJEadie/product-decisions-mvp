@@ -37,8 +37,8 @@ class Bike(models.Model):
 
     @property
     def primary_img_url(self):
-        if len(img_urls) > 0:
-            return img_urls[0]
+        if len(self.img_urls) > 0:
+            return self.img_urls[0]
         else:
             return ""
 
@@ -129,3 +129,6 @@ class Bike(models.Model):
     rider_height_lower_inches = property(lambda self: self._total_inches_to_inches(self.rider_height_lower_total_inches))
     rider_height_upper_feet = property(lambda self: self._total_inches_to_feet(self.rider_height_upper_total_inches))
     rider_height_upper_inches = property(lambda self: self._total_inches_to_inches(self.rider_height_upper_total_inches))
+
+    male = models.BooleanField()
+    female = models.BooleanField()

@@ -11,7 +11,9 @@
             "_img_url_3": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/glEAAOxyWt5SZrTe/$(KGrHqN,!rMFJl!RzI0HBSZrTeKDjg~~60_12.JPG",
             "_img_url_4": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/otQAAOxyffZSZrTm/$(KGrHqJHJE0FJj6iBwY8BSZrTmD+u!~~60_12.JPG",
             "frame_type": "rt",
-            "frame_size_cm": 58 
+            "frame_size_cm": 58,
+            "male": true,
+            "female": true
         }
     }
 ]
