@@ -13,7 +13,8 @@
             "frame_type": "rt",
             "frame_size_cm": 58,
             "male": true,
-            "female": true
+            "female": true,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
         }
     }
 ]

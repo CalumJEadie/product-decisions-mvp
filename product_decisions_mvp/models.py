@@ -132,3 +132,5 @@ class Bike(models.Model):
 
     male = models.BooleanField()
     female = models.BooleanField()
+
+    comments = models.TextField(blank=True)
