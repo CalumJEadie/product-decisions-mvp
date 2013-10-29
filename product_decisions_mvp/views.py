@@ -22,11 +22,11 @@ def api_bikes_all(request):
         return {
             "title": bike.title,
             "price": bike.price,
-            "rider_height_lower_total_inches": bike.rider_height_lower_total_inches,
-            "rider_height_upper_total_inches": bike.rider_height_upper_total_inches,
+            "riderHeightLowerTotalInches": bike.rider_height_lower_total_inches,
+            "riderHeightUpperTotalInches": bike.rider_height_upper_total_inches,
             "male": bike.male,
             "female": bike.female,
-            "primary_img_url": bike.primary_img_url
+            "primaryImgUrl": bike.primary_img_url
         }
 
     bikes = [to_json(bike) for bike in bikes]

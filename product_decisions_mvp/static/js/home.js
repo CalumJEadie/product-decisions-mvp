@@ -2,48 +2,31 @@
 Keep all parts of the application together for the moment.
 
 http://docs.angularjs.org/tutorial/step_02
+
+http://docs.angularjs.org/tutorial/step_11
 */
 
-pdm.controller('BikeSearchController', ['$scope', function ($scope) {
+// Create a service for interacting with Bike data.
+pdm.factory('Bike', ['$resource', function ($resource) {
 
-    $scope.bikes = [
-        {
-            title: "Purple Vintage Road Bike", 
-            price: 400,
-            riderHeightLowerFeet: 5,
-            riderHeightLowerInches: 10,
-            riderHeightUpperFeet: 6,
-            riderHeightUpperInches: 0,
-            buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
-            male: true,
-            female: true,
-            primary_img_url: "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG"
-        },
-        {
-            title: "Purple Vintage Road Bike", 
-            price: 300,
-            riderHeightLowerFeet: 5,
-            riderHeightLowerInches: 10,
-            riderHeightUpperFeet: 6,
-            riderHeightUpperInches: 0,
-            buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
-            male: true,
-            female: true,
-            primary_img_url: "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG"
-        },
-        {
-            title: "Purple Vintage Road Bike", 
-            price: 200,
-            riderHeightLowerFeet: 5,
-            riderHeightLowerInches: 10,
-            riderHeightUpperFeet: 6,
-            riderHeightUpperInches: 0,
-            buyUrl: "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
-            male: true,
-            female: true,
-            primary_img_url: "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG"
+    return $resource('api/bikes/:bikeId.json', {}, {
+
+        query: {
+            method: 'GET',
+            params: {
+                bikeId: 'all'
+            },
+            isArray: true
         }
-    ];
+
+    })
+
+}])
+
+// Create a controller for the bike search 
+pdm.controller('BikeSearchController', ['$scope', 'Bike', function ($scope, Bike) {
+
+    $scope.bikes = Bike.query()
 
     $scope.matchesRider = function( bike ) {
         /*
@@ -51,8 +34,11 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
         */
 
         riderHeight = parseInt($scope.riderHeightFeet)*12 + parseInt($scope.riderHeightInches)
-        riderHeightLowerBound = bike.riderHeightLowerFeet*12 + bike.riderHeightLowerInches
-        riderHeightUpperBound = bike.riderHeightUpperFeet*12 + bike.riderHeightUpperInches
+
+        heightFit = riderHeight >= bike.riderHeightLowerTotalInches &&
+            riderHeight <= bike.riderHeightUpperTotalInches
+
+        console.log(heightFit)
 
         // Show a bike if either
         // (1) The rider wants a bike for men and the bikes fits men
@@ -60,9 +46,7 @@ pdm.controller('BikeSearchController', ['$scope', function ($scope) {
         genderFit = ( $scope.riderMale && bike.male ) ||
             ( $scope.riderFemale && bike.female )
 
-        return riderHeight >= riderHeightLowerBound &&
-            riderHeight <= riderHeightUpperBound &&
-            genderFit
+        return heightFit && genderFit
     }
 
     /* Start off accepting male and female bikes */
