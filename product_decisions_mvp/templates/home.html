@@ -35,7 +35,7 @@
 
         <div class="form-group">
           <div class="input-group input-group-lg" style="width: 100px;">
-            <input id="riderHeightFeet" ng-model="riderHeightFeet" type="text" class="form-control">
+            <input id="riderHeightFeet" ng-model="riderHeightFeet" type="text" class="form-control" ng-change="filteringBegun=true;">
             <span class="input-group-addon">ft</span>
           </div>
         </div>
@@ -44,7 +44,7 @@
 
         <div class="form-group">
           <div class="input-group input-group-lg" style="width: 100px;">
-            <input ng-model="riderHeightInches" type="text" class="form-control">
+            <input ng-model="riderHeightInches" type="text" class="form-control" ng-change="filteringBegun=true;">
             <span class="input-group-addon">in</span>
           </div>
         </div>
@@ -54,10 +54,10 @@
         </div>
 
         <div class="btn-group" data-toggle="buttons" style="margin-right: 10px;">
-          <label class="btn btn-primary btn-lg" ng-click="setRiderMale()">
+          <label class="btn btn-primary btn-lg" ng-click="setRiderMale(); filteringBegun=true;">
             <input type="radio">Guy
           </label>
-          <label class="btn btn-primary btn-lg" ng-click="setRiderFemale()">
+          <label class="btn btn-primary btn-lg" ng-click="setRiderFemale(); filteringBegun=true;">
             <input type="radio">Girl
           </label>
         </div>
@@ -73,7 +73,8 @@
   <!-- Bike Tiles -->
   <div class="row">
 
-    <div ng-repeat="bike in bikes | filter:matchesRider" class="col-sm-6 col-md-4">
+    <div ng-repeat="bike in bikes | filter:displayBike" class="col-sm-6 col-md-4">
+
       <div class="thumbnail">
         
         {% verbatim %}

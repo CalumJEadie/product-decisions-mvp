@@ -3,7 +3,26 @@
         "pk": 1, 
         "model": "product_decisions_mvp.bike", 
         "fields": {
-            "title": "Purple Vintage Road Bike", 
+            "title": "(S) Purple Vintage Road Bike", 
+            "price": 300,
+            "buy_url": "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
+            "_img_url_1": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG",
+            "_img_url_2": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/Zf8AAOxyTyBSZrTX/$T2eC16hHJF8FFqIWbY3,BSZrTUUP7Q~~60_12.JPG",
+            "_img_url_3": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/glEAAOxyWt5SZrTe/$(KGrHqN,!rMFJl!RzI0HBSZrTeKDjg~~60_12.JPG",
+            "_img_url_4": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/otQAAOxyffZSZrTm/$(KGrHqJHJE0FJj6iBwY8BSZrTmD+u!~~60_12.JPG",
+            "frame_type": "rt",
+            "frame_size_cm": 48,
+            "male": true,
+            "female": true,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+        }
+    },
+
+    {
+        "pk": 2, 
+        "model": "product_decisions_mvp.bike", 
+        "fields": {
+            "title": "(M) Purple Vintage Road Bike", 
             "price": 400,
             "buy_url": "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
             "_img_url_1": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG",
@@ -12,6 +31,25 @@
             "_img_url_4": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/otQAAOxyffZSZrTm/$(KGrHqJHJE0FJj6iBwY8BSZrTmD+u!~~60_12.JPG",
             "frame_type": "rt",
             "frame_size_cm": 58,
+            "male": true,
+            "female": true,
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+        }
+    },
+
+    {
+        "pk": 3, 
+        "model": "product_decisions_mvp.bike", 
+        "fields": {
+            "title": "(L) Purple Vintage Road Bike", 
+            "price": 500,
+            "buy_url": "http://www.ebay.co.uk/itm/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/300997251850",
+            "_img_url_1": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/zI4AAOxy79JSZrS6/$(KGrHqNHJF!FJiV8qOYtBSZrS6ScJ!~~60_12.JPG",
+            "_img_url_2": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/Zf8AAOxyTyBSZrTX/$T2eC16hHJF8FFqIWbY3,BSZrTUUP7Q~~60_12.JPG",
+            "_img_url_3": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/glEAAOxyWt5SZrTe/$(KGrHqN,!rMFJl!RzI0HBSZrTeKDjg~~60_12.JPG",
+            "_img_url_4": "http://i.ebayimg.com/t/FALCON-58CM-VINTAGE-ROAD-BIKE-REYNOLDS-531-5-SPEED-PURPLE-/00/s/MTIwMFgxNjAw/z/otQAAOxyffZSZrTm/$(KGrHqJHJE0FJj6iBwY8BSZrTmD+u!~~60_12.JPG",
+            "frame_type": "rt",
+            "frame_size_cm": 68,
             "male": true,
             "female": true,
             "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
