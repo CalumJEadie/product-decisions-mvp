@@ -16,43 +16,48 @@
 <!-- Angular active within this div -->
 <div ng-app="pdm" ng-controller="BikeSearchController" class="container" style="margin-top: 30px;">
 
-  <div class="jumbotron" style="background-image:url({% static "img/Home/Home1.jpg" %}); background-size: cover; background-positon: right bottom; min-height: 300px; padding: 50px;">
+  <div class="jumbotron" style="background-image:url({% static "img/biketailor-header.jpg" %}); background-size: cover; background-positon: right bottom; min-height: 300px; padding: 50px; text-align: center;">
 
     <div class="container">
 
-      <h1>Tailored Bike</h1>
+      <h1 style="color: #fff;">Find the perfect bike for you</h1>
 
-      <h2>Find the perfect bike for you</h2>
+      <h2 style="color: #fff;">Get started by telling us more about yourself</h2>
 
       <br>
 
-      <form class="form-inline" role="form" style="font-size: 14px;">
+      {# Need to reset base font size here, as jumbotron changes it and form elemnts rely on it #}
+      <form class="form-inline" role="form" style="font-size: 14px; background: rgba(57, 60, 61, 0.8); box-shadow: 0 0 5px rgba(0,0,0,0.5); border-radius: 3px; border: 1px solid rgba(0,0,0,0.8); padding: 4px; display: inline-block;">
 
-        I am&nbsp;&nbsp;
+        <span style="color: white; font-size: 18px; line-height: 1.33">I am</span>&nbsp;&nbsp;
 
         <div class="form-group">
-          <div class="input-group" style="width: 100px;">
+          <div class="input-group input-group-lg" style="width: 100px;">
             <input ng-model="riderHeightFeet" type="text" class="form-control">
-            <span class="input-group-addon">foot</span>
+            <span class="input-group-addon">ft</span>
           </div>
         </div>
 
         &nbsp;&nbsp;
 
         <div class="form-group">
-          <div class="input-group" style="width: 100px;">
+          <div class="input-group input-group-lg" style="width: 100px;">
             <input ng-model="riderHeightInches" type="text" class="form-control">
-            <span class="input-group-addon">inch</span>
+            <span class="input-group-addon">in</span>
           </div>
         </div>
 
-        &nbsp;&nbsp;and a&nbsp;&nbsp;
+        &nbsp;&nbsp;
+
+        <span style="color: white; font-size: 18px; line-height: 1.33">tall and a</span>
+
+        &nbsp;&nbsp;
 
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary" ng-click="setRiderMale()">
+          <label class="btn btn-primary btn-lg" ng-click="setRiderMale()">
             <input type="radio">Guy
           </label>
-          <label class="btn btn-primary" ng-click="setRiderFemale()">
+          <label class="btn btn-primary btn-lg" ng-click="setRiderFemale()">
             <input type="radio">Girl
           </label>
         </div>
