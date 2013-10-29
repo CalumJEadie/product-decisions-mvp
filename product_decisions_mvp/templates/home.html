@@ -27,18 +27,20 @@
       <br>
 
       {# Need to reset base font size here, as jumbotron changes it and form elemnts rely on it #}
-      <form class="form-inline" role="form" style="font-size: 14px; background: rgba(57, 60, 61, 0.8); box-shadow: 0 0 5px rgba(0,0,0,0.5); border-radius: 3px; border: 1px solid rgba(0,0,0,0.8); padding: 4px; display: inline-block;">
+      <form class="form-inline" role="form" style="font-size: 14px; background: rgb(0, 0, 0); box-shadow: 0 0 5px rgba(0,0,0,0.5); border-radius: 3px; border: 1px solid rgba(0,0,0,0.8); padding: 10px; display: inline-block;">
 
-        <span style="color: white; font-size: 18px; line-height: 1.33">I am</span>&nbsp;&nbsp;
+        <div class="form-group" style="margin: 0 10px 0 10px; color: white; font-size: 24px; line-height: 1.33">
+          I am
+        </div>
 
         <div class="form-group">
           <div class="input-group input-group-lg" style="width: 100px;">
-            <input ng-model="riderHeightFeet" type="text" class="form-control">
+            <input id="riderHeightFeet" ng-model="riderHeightFeet" type="text" class="form-control">
             <span class="input-group-addon">ft</span>
           </div>
         </div>
 
-        &nbsp;&nbsp;
+        &nbsp;
 
         <div class="form-group">
           <div class="input-group input-group-lg" style="width: 100px;">
@@ -47,13 +49,11 @@
           </div>
         </div>
 
-        &nbsp;&nbsp;
+        <div class="form-group" style="margin: 0 10px 0 10px; color: white; font-size: 24px; line-height: 1.33">
+          tall and a
+        </div>
 
-        <span style="color: white; font-size: 18px; line-height: 1.33">tall and a</span>
-
-        &nbsp;&nbsp;
-
-        <div class="btn-group" data-toggle="buttons">
+        <div class="btn-group" data-toggle="buttons" style="margin-right: 10px;">
           <label class="btn btn-primary btn-lg" ng-click="setRiderMale()">
             <input type="radio">Guy
           </label>
@@ -93,4 +93,14 @@
 
 </div>
 <!-- /.container -->
+{% endblock %}
+
+{% block extra_script %}
+<script>
+  $( document ).ready(function() {
+   
+    $( "#riderHeightFeet" ).focus()
+   
+  });
+</script>
 {% endblock %}
