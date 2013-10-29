@@ -73,20 +73,28 @@
   <!-- Bike Tiles -->
   <div class="row">
 
-    <div ng-repeat="bike in bikes | filter:displayBike" class="col-sm-6 col-md-4">
+    <div ng-repeat="bike in bikes | filter:displayBike" class="col-sm-6 col-md-4 bike-tile"> 
 
-      <div class="thumbnail">
+      <div class="thumbnail" style="border: 0;">
         
         {% verbatim %}
-        <img src="{{ bike.primaryImgUrl }}" style="min-height: 100px;">
+        
+          <a href="bikes/{{ bike.id }}/">
+
+            <img src="{{ bike.primaryImgUrl }}">
+
+          </a>
+        
 
         <div class="caption">
-        <h4>{{ bike.title }}</h4>
+          <h4>{{ bike.title }}</h4>
 
-        <p><a href="bikes/{{ bike.id }}/" class="btn btn-primary">View</a></p>
-        {% endverbatim %}
+          <h5>£{{ bike.price }} from ebay.com</h5>
         </div>
+        {% endverbatim %}
+
       </div>
+
     </div>    
 
   </div>

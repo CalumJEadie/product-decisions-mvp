@@ -14,3 +14,30 @@ q:before {
 q:after {
     content: close-quote;
 }
+
+.bike-tile .thumbnail {
+    border: none;
+}
+
+.bike-tile .caption {
+    border: solid #dddddd;
+    border-width: 0 1px 1px 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+.bike-tile img {
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.bike-tile:hover .caption {
+    color: white;
+    /* @brand-primary */
+    background: #1e6907;
+    border: none;
+}
