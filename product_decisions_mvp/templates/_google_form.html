@@ -1,0 +1,33 @@
+{% comment %}
+Google Form Hack, based on:
+
+- http://code61.org/lp2/#!3_google_forms
+- http://morning.am/tutorials/how-to-style-google-forms/
+
+For google form: https://docs.google.com/forms/d/1FLm9PvVKYK4zEP-VBcW0CpbL4BI4ktSesJazIjgiDls/formResponse
+
+google_form_id = "1FLm9PvVKYK4zEP-VBcW0CpbL4BI4ktSesJazIjgiDls"
+
+Parameters:
+- google_form_id
+- onload
+- extra
+
+Set up google form with each question paragraph text, not required.
+
+Can use hidden fields to specify the content going into visible fields.
+
+hidden_1
+visible_1
+visible_2
+visible_3
+visible_4
+visible_5
+
+{% endcomment %}
+
+<script type="text/javascript">var submitted_{{ google_form_id }}=false;</script>
+
+<iframe name="hidden_iframe_{{ google_form_id }}" id="hidden_iframe_{{ google_form_id }}" style="display:none;" onload="if(submitted_{{ google_form_id }}) { {{ onload }}; $('#form_{{ google_form_id }}').trigger('reset') }"></iframe>
+
+<form id="form_{{ google_form_id }}" action="https://docs.google.com/forms/d/{{ google_form_id }}/formResponse" method="POST" target="hidden_iframe_{{ google_form_id }}" onsubmit="submitted_{{ google_form_id }}=true;" {{ extra }}>

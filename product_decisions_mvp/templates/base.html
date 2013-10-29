@@ -46,7 +46,7 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
         <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="TODO">Feedback</a></li>
+        <li><a data-toggle="modal" href="#contact_modal">Contact</a></li>
         <li><a href="http://blog.21spokes.com">Blog</a></li>
         </ul>
       </div>
@@ -70,7 +70,7 @@
           <a href="{% url 'about' %}">About</a>
           &nbsp;
           &nbsp;
-          <a href="TODO">Contact us</a>
+          <a data-toggle="modal" href="#contact_modal">Contact</a>
         </p>
         <p class="pull-right">
           Made in London
@@ -83,6 +83,8 @@
         </p>
       </footer>
     </div>
+
+    {% include "_contact_modal.html" %}
 
     {% block script_base %}
     <script src="{% static "jquery/js/jquery.js" %}"></script>
