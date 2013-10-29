@@ -20,6 +20,7 @@ def api_bikes_all(request):
 
     def to_json(bike):
         return {
+            "id": bike.pk,
             "title": bike.title,
             "price": bike.price,
             "riderHeightLowerTotalInches": bike.rider_height_lower_total_inches,
