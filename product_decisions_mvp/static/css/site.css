@@ -1,6 +1,6 @@
-body {
+/*body {
     padding-top: 50px;
-}
+}*/
 
 q {
     quotes: '“' '”' '‘' '’';
@@ -40,4 +40,19 @@ q:after {
     /* @brand-primary */
     background: #1e6907;
     border: none;
+}
+
+/* Based on http://antjanus.com/blog/uncategorized/make-bootstrap-3-theme-proper-way/ */
+.navbar-transparent {
+    background: transparent;
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar-transparent a {
+    color: #fff;
+}
+
+.jumbotron {
+    margin-top: -50px;
 }

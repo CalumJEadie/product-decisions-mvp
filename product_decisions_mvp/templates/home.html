@@ -14,9 +14,9 @@
 {% block body_base %}
 
 <!-- Angular active within this div -->
-<div ng-app="pdm" ng-controller="BikeSearchController" class="container" style="margin-top: 30px;">
+<div ng-app="pdm" ng-controller="BikeSearchController">
 
-  <div class="jumbotron" style="background-image:url({% static "img/biketailor-header.jpg" %}); background-size: cover; background-positon: right bottom; min-height: 300px; padding: 50px; text-align: center;">
+  <div class="jumbotron" style="background-image:url({% static "img/biketailor-header.jpg" %}); background-size: cover; background-positon: right bottom; min-height: 300px; padding: 60px 50px 50px 50px; text-align: center;">
 
     <div class="container">
 
@@ -70,38 +70,43 @@
   </div>
   <!-- /.jumbotron -->
 
-  <!-- Bike Tiles -->
-  <div class="row">
+  <div class="container">
 
-    <div ng-repeat="bike in bikes | filter:displayBike" class="col-sm-6 col-md-4 bike-tile"> 
+    <!-- Bike Tiles -->
+    <div class="row">
 
-      <div class="thumbnail" style="border: 0;">
-        
-        {% verbatim %}
-        
-          <a href="bikes/{{ bike.id }}/">
+      <div ng-repeat="bike in bikes | filter:displayBike" class="col-sm-6 col-md-4 bike-tile"> 
 
-            <img src="{{ bike.primaryImgUrl }}">
+        <div class="thumbnail" style="border: 0;">
+          
+          {% verbatim %}
+          
+            <a href="bikes/{{ bike.id }}/">
 
-          </a>
-        
+              <img src="{{ bike.primaryImgUrl }}">
 
-        <div class="caption">
-          <h4>{{ bike.title }}</h4>
+            </a>
+          
 
-          <h5>£{{ bike.price }} from ebay.com</h5>
+          <div class="caption">
+            <h4>{{ bike.title }}</h4>
+
+            <h5>£{{ bike.price }} from ebay.com</h5>
+          </div>
+          {% endverbatim %}
+
         </div>
-        {% endverbatim %}
 
-      </div>
+      </div>    
 
-    </div>    
+    </div>
+    <!-- /Bikes Tiles -->
 
   </div>
-  <!-- /Bikes Tiles -->
+  <!-- /.container -->
 
 </div>
-<!-- /.container -->
+<!-- / ng-controller="BikeSearchController" -->
 {% endblock %}
 
 {% block extra_script %}
