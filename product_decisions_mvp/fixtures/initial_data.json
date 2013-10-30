@@ -14,7 +14,8 @@
             "frame_size_cm": 48,
             "male": true,
             "female": true,
-            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+            "_activities": "Commuting, Going to the shops, Low maintance, Checked not stolen, Looking like a boss"
         }
     },
 
@@ -33,7 +34,8 @@
             "frame_size_cm": 58,
             "male": true,
             "female": true,
-            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+            "_activities": "Commuting, Going to the shops, Low maintance, Checked not stolen, Looking like a boss"
         }
     },
 
@@ -52,7 +54,8 @@
             "frame_size_cm": 68,
             "male": true,
             "female": true,
-            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+            "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+            "_activities": "Commuting, Going to the shops, Low maintance, Checked not stolen, Looking like a boss"
         }
     }
 ]

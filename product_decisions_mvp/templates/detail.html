@@ -115,11 +115,9 @@
 
                   <ul class="list-inline">
 
-                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Commuting</span></li>
-                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Going to the shops</span></li>
-                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Low maintance</span></li>
-                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Checked not stolen</span></li>
-                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;Looking like a boss</span></li>
+                    {% for activity in bike.activities %}
+                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;{{ activity }}</span></li></li>
+                    {% endfor %}
 
                   </ul>
 

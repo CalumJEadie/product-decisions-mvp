@@ -134,3 +134,13 @@ class Bike(models.Model):
     female = models.BooleanField()
 
     comments = models.TextField(blank=True)
+
+    # Implement activities with a comma seperated text field.
+    # Expose pubically with `activities`.
+
+    _activities = models.CharField(max_length=200)
+
+    @property
+    def activities(self):
+        """Returns a list of the activities the bike supports."""
+        return self._activities.split(",")
