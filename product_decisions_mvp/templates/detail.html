@@ -27,7 +27,7 @@
       
 
           <!-- Carousel -->
-          <div id="bike-carousel" class="carousel slide" style="margin-bottom: 20px; cursor: pointer;" onclick="$(this).carousel('next');">
+          <div id="bike-carousel" class="carousel" style="margin-bottom: 20px; cursor: pointer;" onclick="$(this).carousel('next');">
 
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -41,7 +41,7 @@
             <div class="carousel-inner">
               {% for img_url in bike.img_urls %}
               <div class="{% if forloop.first %}active {% endif %}item">
-                <img src="{{ img_url }}" class="img-rounded img-responsive" style="width: 100%;"
+                <img src="{{ img_url }}" class="img-responsive" style="width: 100%;"
                 />
               </div>
               {% endfor %}
@@ -163,7 +163,7 @@
                 </div>
 
                 <div class="col-md-10">
-                  <h4>Within 20 km of Big Ben.</h4>
+                  <h4>Within <strong>20 km</strong> of Big Ben.</h4>
                 </div>
 
               </div>
