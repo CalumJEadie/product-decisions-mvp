@@ -55,17 +55,17 @@
 
 
       <!-- Bike Details Panel -->
-      <div class="panel panel-default">
+      <div class="panel panel-default" style="min-height: 200px;">
         <div class="panel-body">
 
-          <ul class="nav nav-tabs" id="myTab">
-            <li class="active"><a href="#fit">Fit</a></li>
-            <li><a href="#specifications">Specifications</a></li>
-            <li><a href="#location">Location</a></li>
+          <ul class="nav nav-tabs" id="bike-details-tabs">
+            <li class="active"><a href="#bike-details-tabs-fit" data-toggle="tab">Fit</a></li>
+            <li><a href="#bike-details-tabs-details" data-toggle="tab">Location and Specifications</a></li>
           </ul>
 
           <div class="tab-content">
-            <div class="tab-pane active" id="fit">
+
+            <div class="tab-pane active" id="bike-details-tabs-fit">
 
               <br>
 
@@ -150,8 +150,45 @@
               </div>
 
             </div>
-            <div class="tab-pane" id="specifications"></div>
+            <!-- /.tab-pane -->
+
+            <div class="tab-pane" id="bike-details-tabs-details">
+
+              <br>
+
+              <div class="row">
+
+                <div class="col-md-2">
+                  <h4>LOCATION</h4>
+                </div>
+
+                <div class="col-md-10">
+                  <h4>Within 20 km of Big Ben.</h4>
+                </div>
+
+              </div>
+
+              <br>
+
+              <div class="row">
+
+                <div class="col-md-2">
+                  <h4>SPECS</h4>
+                </div>
+
+                <div class="col-md-10">
+                    <p>
+                      <a class="btn btn-success" type="button" href="{{ bike.buy_url }}">View Specifications</a>
+                    </p>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- /.tab-pane -->
+
           </div>
+          <!-- /.tab-content -->
 
         </div> <!-- /.panel-body -->
       </div><!-- /.panel -->
