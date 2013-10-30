@@ -73,11 +73,11 @@ class Bike(models.Model):
 
     @classmethod
     def _town_dutch_frame_size_to_lower_rider_height(cls, frame_size_inches):
-        return cls._town_dutch_frame_size_to_lower_rider_height(frame_size_inches)-2.5
+        return cls._town_dutch_frame_size_to_ideal_rider_height(frame_size_inches)-2.5
 
     @classmethod
     def _town_dutch_frame_size_to_upper_rider_height(cls, frame_size_inches):
-        return cls._town_dutch_frame_size_to_lower_rider_height(frame_size_inches)+2.5
+        return cls._town_dutch_frame_size_to_ideal_rider_height(frame_size_inches)+2.5
 
     @staticmethod
     def _racing_touring_frame_size_to_ideal_rider_height(frame_size_inches):
