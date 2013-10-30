@@ -231,12 +231,23 @@
 
           <div>
             <div class="col-lg-10 col-lg-offset-1">
-              <div class="input-group">
-                <input type="email" class="form-control" placeholder="your email">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">submit</button>
-                </span>
-              </div><!-- /input-group -->
+
+              {% include "_google_form.html" with google_form_id="1TFt6J48Tfr1Z9eytYZCOsRTT6Q2ZmIFgdSBBD7ITmOM" extra="class='form-horizontal' role='form'" onload="$('#recommendation-email').val('').attr('placeholder', 'we\'ll be in touch soon!');" %}
+
+                <input name="entry.998103800" type="hidden" value="bike_id,email" />
+
+                <input name="entry.573913575" type="hidden" value="{{ bike.pk }}" />
+
+                <div class="input-group">
+
+                  <input name="entry.565907830" id="recommendation-email" type="email" class="form-control" placeholder="your email" required>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">submit</button>
+                  </span>
+
+                </div><!-- /input-group -->
+
+              </form>              
             </div>
           </div>
 
@@ -277,18 +288,10 @@
 <script>
   jQuery(document).ready(function($) {
 
-  $('#bike-carousel').carousel({
-    // Do not automatically cycle.
-    interval: false;
-  });
-
-  //Handles the carousel thumbnails
-  $('[id^=carousel-selector-]').click( function(){
-      var id_selector = $(this).attr("id");
-      var id = id_selector.substr(id_selector.length -1);
-      var id = parseInt(id);
-      $('#bike-carousel').carousel(id);
-  });
+    $('#bike-carousel').carousel({
+      // Do not automatically cycle.
+      interval: false
+    });
 
   });
 </script>
