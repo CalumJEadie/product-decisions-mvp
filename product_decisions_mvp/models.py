@@ -144,3 +144,5 @@ class Bike(models.Model):
     def activities(self):
         """Returns a list of the activities the bike supports."""
         return self._activities.split(",")
+
+    show_until = models.DateTimeField()
