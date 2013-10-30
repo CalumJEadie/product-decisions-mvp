@@ -111,12 +111,16 @@
 
                   <h4>Good for ...</h4>
 
-                  <br>
-
                   <ul class="list-inline">
 
                     {% for activity in bike.activities %}
-                    <li><span class="label label-success"><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;{{ activity }}</span></li></li>
+                    <li style="padding-top: 5px; padding-bottom: 5px">
+                      <span class="label label-success" style="font-size: 14px;">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        &nbsp;&nbsp;
+                        {{ activity }}
+                      </span>
+                    </li>
                     {% endfor %}
 
                   </ul>
