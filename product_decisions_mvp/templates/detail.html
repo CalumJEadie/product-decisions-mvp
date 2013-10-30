@@ -139,7 +139,11 @@
                   
                     <h4><q>{{ bike.comments }}</q></h4>
 
-                    <p>Calum, Decidor Co-Founder</p>
+                    {% if bike.pk|divisibleby:2 %}
+                      <p>Andrew, 21 Spokes Co-Founder</p>
+                    {% else %}
+                      <p>Calum, 21 Spokes Co-Founder</p>
+                    {% endif %}
 
                 </div>
 
