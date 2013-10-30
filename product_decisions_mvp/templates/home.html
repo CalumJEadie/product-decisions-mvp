@@ -11,23 +11,56 @@
 <script src="{% static "js/home.js" %}"></script>
 {% endblock %}
 
+{% block navbar_base %}
+{% endblock %}
+
 {% block body_base %}
 
 <!-- Angular active within this div -->
 <div ng-app="pdm" ng-controller="BikeSearchController">
 
-  <div class="jumbotron" style="background-image:url({% static "img/splash-blurred.jpg" %}); background-size: cover; background-position: center bottom; min-height: 300px; padding: 60px 50px 50px 50px; text-align: center;">
+  <div style="background-image:url({% static "img/splash-blurred.jpg" %}); background-size: cover; background-position: center bottom;">
 
-    <div class="container">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px; background: transparent; border: none;">
+
+      <div class="container">
+
+        {# Brand and toggle get grouped for better mobile display #}
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 0; padding: 10px 15px 0 0;">
+              <img style="height: 60px;" src="{% static "img/21spokeslogowhite.png" %}" alt="21 Spokes">
+              <!-- 21 Spokes -->
+          </a>
+        </div>
+
+        {# Collect the nav links, forms, and other content for toggling #}
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a data-toggle="modal" href="#contact_modal">Contact</a></li>
+          <li><a href="http://blog.21spokes.com">Blog</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+
+      </div>
+
+    </nav>
+    <!--/.navbar-->
+
+    <div class="jumbotron container" style="text-align: center; background: transparent; padding: 0px 50px 50px 50px;">
 
       <h1 style="color: #fff;">Find the perfect bike for you</h1>
 
-      <h2 style="color: #fff;">Get started by telling us more about yourself</h2>
-
-      <br>
+      <h2 style="color: #fff; margin-top: 30px;">Get started by telling us more about yourself</h2>
 
       {# Need to reset base font size here, as jumbotron changes it and form elemnts rely on it #}
-      <form class="form-inline" role="form" style="font-size: 14px; background: rgb(0, 0, 0); box-shadow: 0 0 5px rgba(0,0,0,0.5); border-radius: 3px; border: 1px solid rgba(0,0,0,0.8); padding: 10px; display: inline-block;">
+      <form class="form-inline" role="form" style="font-size: 14px; background: rgb(0,0,0); box-shadow: 0 0 5px rgba(0,0,0,0.5); border-radius: 3px; border: 1px solid rgba(0,0,0,0.8); padding: 10px; display: inline-block; margin-top: 30px;">
 
         <div class="form-group" style="margin: 0 10px 0 10px; color: white; font-size: 24px; line-height: 1.33">
           I am
@@ -65,10 +98,10 @@
       </form>
 
     </div>
+    <!-- /.jumbotron -->
     <!-- /.container -->
 
   </div>
-  <!-- /.jumbotron -->
 
   <div class="container">
 
