@@ -16,7 +16,7 @@ def detail(request, bike_id):
 
 def api_bikes_all(request):
 
-    bikes = Bike.objects.all()
+    bikes = Bike.objects.order_by('-pk')
 
     def to_json(bike):
         return {
