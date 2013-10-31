@@ -7,6 +7,7 @@
 {% block facebook_title %}{{ bike.title }} - 21 Spokes{% endblock %}
 {% block facebook_description %}21 Spokes help you find the perfect bike.{% endblock %}
 {% block facebook_url %}{% url 'detail' bike.pk %}{% endblock %}
+{% block facebook_image %}{{ bike.primary_img_url }}{% endblock %}
 
 {% block body_base %}
 <div class="container">

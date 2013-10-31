@@ -14,7 +14,7 @@
     <title>{% block head_title %}21 Spokes{% endblock %}</title>
 
     {# Facebook Open Graph Meta Tags #}
-    <meta property="og:image" content="{% static "img/21spokeslogoblack.png" %}"/>
+    <meta property="og:image" content="{% block facebook_image %}{% static "img/21spokeslogoblack.png" %}{% endblock %}"/>
     <meta property="og:title" content="{% block facebook_title %}Find the perfect bike for you.{% endblock %}"/>
     <meta property="og:description" content="{% block facebook_description %}Get started by telling us more about yourself.{% endblock %}"/>
     <meta property="og:url" content="{% block facebook_url %}{% url 'home' %}{% endblock %}"/>
