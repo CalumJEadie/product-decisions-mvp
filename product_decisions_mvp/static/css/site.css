@@ -15,6 +15,15 @@ q:after {
     content: close-quote;
 }
 
+.bike-tile {
+    /*
+    Makes tiles where img is too long relative to it's height
+    the same height, whilst allowing tile to increase in size for
+    small devices.
+    */
+    min-height: 357px;
+}
+
 .bike-tile .thumbnail {
     border: none;
 }
