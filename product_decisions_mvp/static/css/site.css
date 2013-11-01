@@ -20,8 +20,11 @@ q:after {
     Makes tiles where img is too long relative to it's height
     the same height, whilst allowing tile to increase in size for
     small devices.
+
+    376 is the height of a well sized img (500:375) with two lines
+    of title.
     */
-    min-height: 357px;
+    min-height: 376px;
 }
 
 .bike-tile .thumbnail {
