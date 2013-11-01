@@ -39,7 +39,7 @@ q:after {
     color: white;
     /* @brand-primary */
     background: #1e6907;
-    border: none;
+    border-color: #1e6907;
 }
 
 /* Based on http://antjanus.com/blog/uncategorized/make-bootstrap-3-theme-proper-way/ */
