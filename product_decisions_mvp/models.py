@@ -1,6 +1,7 @@
 import math
 
 from django.db import models
+from django.utils import timezone
 
 class Bike(models.Model):
 
@@ -146,3 +147,7 @@ class Bike(models.Model):
         return self._activities.split(",")
 
     show_until = models.DateTimeField()
+
+    @property
+    def expired(self):
+        return self.show_until <= timezone.now()
