@@ -24,7 +24,7 @@
     </tr>
 
     {% for bike in bikes %}
-    <tr class="{% if bike.expired %}danger{% else %}active{% endif %}">
+    <tr class="{% if bike.expired %}danger{% else %}success{% endif %}">
       <td><img src="{{ bike.primary_img_url }}" style="width: 100px;" /></td>
       <td>{{ bike.title }}</td>
       <td>{{ bike.show_until }}</td>
