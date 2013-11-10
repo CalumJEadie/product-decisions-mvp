@@ -14,9 +14,18 @@ def detail(request, bike_id):
 
     return render(request, 'detail.html', {'bike': bike})
 
+def all(request):
+
+    bikes = Bike.objects.order_by('-pk')
+
+    return render(request, 'all.html', {'bikes': bikes})
+
 def api_bikes_all(request):
 
     bikes = Bike.objects.order_by('-pk')
+
+    # Remove any bikes that have expired.
+    bikes = filter(lambda b: not b.expired, bikes)
 
     def to_json(bike):
         return {

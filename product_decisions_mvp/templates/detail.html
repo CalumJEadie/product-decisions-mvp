@@ -42,8 +42,7 @@
             <div class="carousel-inner">
               {% for img_url in bike.img_urls %}
               <div class="{% if forloop.first %}active {% endif %}item">
-                <img src="{{ img_url }}" class="img-responsive" style="width: 100%;"
-                />
+                <img src="{{ img_url }}" class="img-responsive" style="width: 100%;" />
               </div>
               {% endfor %}
             </div>

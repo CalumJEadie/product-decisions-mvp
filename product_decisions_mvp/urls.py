@@ -22,6 +22,8 @@ urlpatterns = patterns('',
 
     url(r'^about/$', TemplateView.as_view(template_name="about.html"), name="about"),
 
+    url(r'^bikes/all/$', views.all, name='all'),
+
     # e.g. /bikes/1/
     url(r'^bikes/(?P<bike_id>\d+)/$', views.detail, name='detail'),
 
