@@ -1,7 +1,39 @@
-product-decisions-mvp
+Product Decisions MVP
 =====================
 
-http://product-decisions-mvp.herokuapp.com/
+A prototype for exploring buying decisions.
+
+Screenshots
+-----------
+
+!["Home 1"](screenshots/home-1.png)
+
+!["Home 2"](screenshots/home-2.png)
+
+!["Detail 1"](screenshots/detail-1.png)
+
+!["Detail 2"](screenshots/detail-2.png)
+
+!["Detail 3"](screenshots/detail-3.png)
+
+!["Contact Us"](screenshots/contact-us.png)
+
+!["About"](screenshots/about.png)
+
+
+Made with
+---------
+
+- Django
+- Vagrant
+- Heroku
+- Bootstrap
+- Google Forms
+- Google Analytics
+- GoSquared
+- Skimlinks
+
+---
 
 Resources
 ---------
