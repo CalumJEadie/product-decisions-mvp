@@ -32,6 +32,8 @@ Made with
 - Google Analytics
 - GoSquared
 - Skimlinks
+- Angular
+- Heroku Data Clips
 
 ---
 
