@@ -24,8 +24,9 @@ def api_bikes_all(request):
 
     bikes = Bike.objects.order_by('-pk')
 
-    # Remove any bikes that have expired.
-    bikes = filter(lambda b: not b.expired, bikes)
+    # Disable filter so live site has content on front page.
+    # # Remove any bikes that have expired.
+    # bikes = filter(lambda b: not b.expired, bikes)
 
     def to_json(bike):
         return {
